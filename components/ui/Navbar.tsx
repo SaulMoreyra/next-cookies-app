@@ -1,0 +1,27 @@
+import { AppBar, IconButton, Toolbar, Link, Typography } from '@mui/material'
+import {MenuOutlined}  from '@mui/icons-material'
+import NextLink from 'next/link'
+
+export const Navbar = () => {
+  return (
+    <AppBar position='sticky'>
+      <Toolbar>
+        <IconButton size='large' edge="start">
+          <MenuOutlined/>
+        </IconButton>
+        <NextLink href="/" passHref>
+          <Link>
+            <Typography variant='h6' color="white">Cookie master</Typography>
+          </Link>
+        </NextLink>
+        <div style={{flex: 1}}/>
+        <NextLink href="/theme-changed" passHref>
+          <Link>
+            <Typography variant='h6' color="white">Change theme</Typography>
+          </Link>
+        </NextLink>
+      </Toolbar>
+    </AppBar>
+  )
+}
+
